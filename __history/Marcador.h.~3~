@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+#ifndef MarcadorH
+#define MarcadorH
+#include <string>
+#include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
+#include <vcl.h>
+using namespace std;
+
+//---------------------------------------------------------------------------
+
+class Marcador{
+	private:
+		   int puntaje;
+		   String fecha;
+	public:
+			void create();
+			void agregar(int);
+			int returnpuntaje();
+
+
+};
+
+#endif

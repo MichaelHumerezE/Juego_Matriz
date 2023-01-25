@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef UsuarioH
+#define UsuarioH
+#include <vcl.h>
+
+
+
+
+#include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+//---------------------------------------------------------------------------
+
+
+class Usuario{
+	private:
+	String correo;
+	String UserName;
+	String DatosHistóricos[];
+
+	public:
+	void SetUsuario(String usuario, String password);
+	Boolean login(String usuario, String password);
+
+};
+
+#endif

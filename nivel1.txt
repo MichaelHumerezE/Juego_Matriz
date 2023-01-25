@@ -1,0 +1,8 @@
+fecha:Mon Aug 23 17:35:30 2021
+/puntaje:90/nombre:Jose/
+fecha:Mon Aug 23 17:54:58 2021
+/puntaje:60/nombre:Jose/
+fecha:Mon Aug 23 17:55:48 2021
+/puntaje:75/nombre:Jose/
+fecha:Mon Aug 23 19:56:40 2021
+/puntaje:75/nombre:Michael/

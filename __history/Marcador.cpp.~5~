@@ -1,0 +1,86 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Marcador.h"
+#include <vcl.h>
+#pragma package(smart_init)
+#include <dos.h>
+#include <stdio.h>
+#include <fstream>
+
+void Marcador::create(){
+	puntaje=0;
+
+	std::time_t ct = std::time(0);
+	char* cc = ctime(&ct);
+	fecha= cc;
+
+}
+
+void Marcador::agregar(int puntos){
+puntaje= puntaje+puntos;
+}
+
+int Marcador::returnpuntaje(){
+return puntaje;
+}
+
+void Marcador::guardarPuntaje(int nivel, String nombre){
+	ofstream registro;
+	std::string linea,someString;
+	string nombres=  AnsiStringToStr(nombre);
+
+	switch (nivel){
+		case 1:
+		registro.open("C://Users//ok pc//Desktop//ProyectoP2//nivel1.txt",ios::in|ios::ate);
+			 break;
+		case 2:
+		registro.open("C://Users//ok pc//Desktop//ProyectoP2//nivel2.txt",ios::in|ios::ate);
+			 break;
+		case 3:
+		registro.open("C://Users//ok pc//Desktop//ProyectoP2//nivel3.txt",ios::in|ios::ate);
+			 break;
+    default:
+		;
+	}
+  registro<<"fecha:"<<fecha<<"/puntaje:"<<puntaje<<"/nombre:"<<nombres<<"\n";
+  registro.close();
+
+}
+
+String Marcador::mostrarPuntajes(){
+ifstream registro;
+registro.open("C://Users//ok pc//Desktop//ProyectoP2//registro.txt");
+String resp;
+string reg;
+std::getline(registro, reg);
+	while (reg!=""){
+		resp= StrToAnsiString(reg);
+		setDatos(resp);
+			if(_correo==usuario && _password==password){
+			return true;
+		}
+
+		std::getline(registro, reg);
+	}
+registro.close();
+}
+
+String Marcador::StrToAnsiString(string cadena){
+String res="";
+	for (int i = 0; i <= cadena.length() ; i++) {
+		res+=cadena[i];
+	}
+	return res;
+}
+string Marcador::AnsiStringToStr(String cadena){    //String a string
+string res="";
+	for (int i = 1; i <= cadena.Length(); i++) {
+		res+=cadena[i];
+	}
+	return res;
+}
+
+
+

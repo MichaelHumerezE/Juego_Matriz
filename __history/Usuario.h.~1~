@@ -1,0 +1,17 @@
+//---------------------------------------------------------------------------
+
+#ifndef UsuarioH
+#define UsuarioH
+#include <vcl.h>
+using namespace std;
+//---------------------------------------------------------------------------
+
+
+class Usuario{
+	public:
+	void crear();
+	String prueba();
+
+};
+
+#endif
